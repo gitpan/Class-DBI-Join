@@ -1,0 +1,39 @@
+=head1 NAME
+
+Class::DBI::Join - (Deleted) many-to-many relationships for Class::DBI
+
+=head1 SYNOPSIS
+
+This module no longer works with Class::DBI and has been deleted.
+Class::DBI covers its functionality much better.
+
+
+=head1 DESCRIPTION
+
+This module has been B<deleted> and older versions removed from CPAN.  Please
+use Class::DBI's built in many-to-many relationship handling instead.  See
+L<Class::DBI/"Mapping"> in L<Class::DBI/"Table Relationships"> on how to
+do that.
+
+Class::DBI::Join was a quick hack to get Class::DBI to do many-to-many
+relationships.  Class::DBI can do that better than Class::DBI::Join now.
+Also, CDBI::Join had to do Evil Hackery to work which broke with every
+new version of Class::DBI.  So its no longer being maintained and has been
+removed from CPAN to avoid people wondering why it doesn't work.
+
+If you wish to find a copy of this module, please look on the BackPAN
+historical CPAN archive.  http://history.perl.org/backpan/
+
+
+=head1 AUTHOR
+
+Michael G Schwern <schwern@pobox.com>
+
+
+=head1 SEE ALSO
+
+L<Class::DBI>
+
+=cut
+
+1;

@@ -1,9 +1,6 @@
 Changes
-MANIFEST
+lib/Class/DBI/Join.pod
 Makefile.PL
-lib/Class/DBI/Join.pm
-t/Join.t
-t/lib/Actor.pm
-t/lib/Film.pm
-t/lib/MyBase.pm
-t/lib/Roles.pm
+MANIFEST
+README
+META.yml                                Module meta-data (added by MakeMaker)

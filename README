@@ -1,0 +1,8 @@
+Class::DBI::Join has been deleted, it no longer works.  This is an empty
+distribution, there is no code here.
+
+Please use Class::DBI's built in Mapping table relationships to achieve
+many-to-many relationships.
+
+If you wish to find the old code for Class::DBI::Join, please visit BackPAN
+http://history.perl.org/backpan/

@@ -1,2 +1,12 @@
+This module has been deleted, Class::DBI handles many-to-many
+relationships just fine now.  Please find a version on BackPAN if you
+are still interested.  http://history.perl.org/backpan/.
+
+0.05  Tue May 14 11:30:10 EDT 2002
+  - delete() now honors accessor_name().
+
+0.04  Tue Apr 30 14:33:15 EDT 2002
+  * Getting delete() to DWIM.
+
 0.03  Wed Apr 17 11:10:59 EDT 2002
   * Now a mixin module

@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker;
 
 $PACKAGE = 'Class::DBI::Join';
 ($PACKAGE_FILE = $PACKAGE) =~ s|::|/|g;
-$LAST_API_CHANGE = 0;
+$LAST_API_CHANGE = 0.03;
 
 eval "require $PACKAGE";
 
@@ -23,38 +23,19 @@ are upgrading from a version older than $LAST_API_CHANGE.
 CHANGE_WARN
 }
 
+
+warn <<"DELETION_WARN";
+Class::DBI::Join has been deleted, there is no code in this distribution.
+Class::DBI handles many-to-many relationships just fine, please use its 
+"Mapping" feature instead.
+
+If you wish to find the old Class::DBI::Join, it is available on BackPAN.
+http://history.perl.org/backpan/
+
+DELETION_WARN
+
+
 WriteMakefile(
     NAME            => $PACKAGE,
-    VERSION_FROM    => "lib/$PACKAGE_FILE.pm", # finds $VERSION
-    PREREQ_PM       => { Class::DBI => 0.86,
-                         DBD::CSV   => 0.2002,
-                         Test::More => 0.40,
-                         mixin      => 0.02,
-                       },
+    VERSION         => 0.06,
 );
-
-
-{
-    package MY;
-
-    sub test_via_harness {
-        my($self, $orig_perl, $tests) = @_;
-
-        my @perls = ($orig_perl);
-        push @perls, qw(bleadperl 
-                        perl5.6.1
-                        perl5.6.0
-                        perl5.005_03 
-                        perl5.004_05 
-                        perl5.004_04
-                        perl5.004)
-          if $ENV{PERL_TEST_ALL};
-
-        my $out;
-        foreach my $perl (@perls) {
-            $out .= $self->SUPER::test_via_harness($perl, $tests);
-        }
-
-        return $out;
-    }
-}
